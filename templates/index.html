@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='favicon-96x96.png') }}" type="image/png">
+    <title>Car Controller</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  </head>
+  <body>
+    <!-- Watermark -->
+    <div id="watermark">
+        Made by<br>Matej Gligorijevski
+    </div>
+
+    <!-- Video Stream -->
+    <h1>Car Controller</h1>
+    <img src="http://192.168.1.200:81/stream" class="video-stream" alt="Live Feed">
+
+    <!-- Main Control Layout -->
+    <div class="main-container">
+      <!-- Car Movement Controls -->
+      <div class="control-panel">
+          <h2>Car Movement<br>(W, A, S, D)</h2>
+          <div>
+            <button 
+              onmousedown="handlePress('W')" 
+              onmouseup="handleRelease('W')" 
+              onmouseleave="handleRelease('W')">W</button>
+          </div>
+          <div>
+            <button 
+              onmousedown="handlePress('A')" 
+              onmouseup="handleRelease('A')" 
+              onmouseleave="handleRelease('A')">A</button>
+            <button 
+              onmousedown="handlePress('S')" 
+              onmouseup="handleRelease('S')" 
+              onmouseleave="handleRelease('S')">S</button>
+            <button 
+              onmousedown="handlePress('D')" 
+              onmouseup="handleRelease('D')" 
+              onmouseleave="handleRelease('D')">D</button>
+        </div>
+      </div>
+
+      <!-- Center Controls (Mode, Speed, Lights) -->
+      <div class="control-panel center-controls">
+        <div>
+          <h3>Car Info</h3>
+          <p id="message">{{message}}</p>
+        </div>
+        <div>
+          <h3>Mode</h3>
+          <button 
+            onmousedown="handlePress('M')" 
+            onmouseup="handleRelease('M')" 
+            onmouseleave="handleRelease('M')"
+            onclick="toggleButtonMode(this)" class="mode-button active">Manual
+          </button>
+          <button 
+            onmousedown="handlePress('N')" 
+            onmouseup="handleRelease('N')" 
+            onmouseleave="handleRelease('N')"
+            onclick="toggleButtonMode(this)" class="mode-button">Automatic
+          </button>
+        </div>
+        <div>
+          <h3>Speed</h3>
+          <button 
+            onmousedown="handlePress('I')" 
+            onmouseup="handleRelease('I')" 
+            onmouseleave="handleRelease('I')"
+            onclick="toggleButtonSpeed(this)"
+            class="speed-button">Low
+          </button>
+          <button 
+            onmousedown="handlePress('O')" 
+            onmouseup="handleRelease('O')" 
+            onmouseleave="handleRelease('O')"
+            onclick="toggleButtonSpeed(this)"
+            class="speed-button active">Medium
+          </button>
+          <button 
+            onmousedown="handlePress('P')" 
+            onmouseup="handleRelease('P')" 
+            onmouseleave="handleRelease('P')"
+            onclick="toggleButtonSpeed(this)"
+            class="speed-button">High
+          </button>
+        </div>
+        <div>
+          <h3>Light</h3>
+          <button onmousedown="handlePress('L')" 
+            onmouseup="handleRelease('L')" 
+            onmouseleave="handleRelease('L')"
+            onclick="toggleButtonLight(this)"
+            class="light-button">On
+          </button>
+          <button 
+            onmousedown="handlePress('K')" 
+            onmouseup="handleRelease('K')" 
+            onmouseleave="handleRelease('K')"
+            onclick="toggleButtonLight(this)"
+            class="light-button active">Off
+          </button>
+        </div>
+      </div>
+
+      <!-- Camera Movement Controls -->
+      <div class="control-panel">
+        <h2>Camera Movement<br>(&uarr;, &larr;, &darr;, &rarr;)</h2>
+        <div>
+          <button 
+            onmousedown="handlePress('T')" 
+            onmouseup="handleRelease('T')" 
+            onmouseleave="handleRelease('T')"
+            id="cam-up">&uarr;</button>
+        </div>
+        <div>
+          <button 
+            onmousedown="handlePress('F')" 
+            onmouseup="handleRelease('F')" 
+            onmouseleave="handleRelease('F')"id="cam-left">&larr;</button>
+          <button 
+            onmousedown="handlePress('G')" 
+            onmouseup="handleRelease('G')" 
+            onmouseleave="handleRelease('G')"id="cam-down">&darr;</button>
+          <button 
+            onmousedown="handlePress('H')" 
+            onmouseup="handleRelease('H')" 
+            onmouseleave="handleRelease('H')"id="cam-right">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

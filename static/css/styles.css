@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #41779a, #5d4f90);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Watermark */
+#watermark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+/* Video Stream */
+#video-stream {
+  width: 30%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* Control Containers */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  gap: 20px;
+}
+
+.control-panel {
+  flex: 1;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.control-panel h2 {
+  margin: 10px 0;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1976d2;
+  transform: scale(1.1);
+
+}
+
+.active {
+  background-color: #1a70b7;
+  transform: scale(1.1);
+}
+
+/* Mode and Light Controls */
+.center-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.center-controls div {
+  margin-bottom: 10px;
+}
+
+#current-action {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+#message {
+  font-size: 20px;
+  color: #ffffff;  /* Change text color */
+  font-weight: bold;
+  background-color: #2196f3;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0px;
+}
+.video-stream {
+  transform: scale(-0.7, -0.7); /* Flip horizontally and vertically */
+}
