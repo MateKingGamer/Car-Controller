@@ -46,68 +46,6 @@
         </div>
       </div>
 
-      <!-- Center Controls (Mode, Speed, Lights) -->
-      <div class="control-panel center-controls">
-        <div>
-          <h3>Car Info</h3>
-          <p id="message">{{message}}</p>
-        </div>
-        <div>
-          <h3>Mode</h3>
-          <button 
-            onmousedown="handlePress('M')" 
-            onmouseup="handleRelease('M')" 
-            onmouseleave="handleRelease('M')"
-            onclick="toggleButtonMode(this)" class="mode-button active">Manual
-          </button>
-          <button 
-            onmousedown="handlePress('N')" 
-            onmouseup="handleRelease('N')" 
-            onmouseleave="handleRelease('N')"
-            onclick="toggleButtonMode(this)" class="mode-button">Automatic
-          </button>
-        </div>
-        <div>
-          <h3>Speed</h3>
-          <button 
-            onmousedown="handlePress('I')" 
-            onmouseup="handleRelease('I')" 
-            onmouseleave="handleRelease('I')"
-            onclick="toggleButtonSpeed(this)"
-            class="speed-button">Low
-          </button>
-          <button 
-            onmousedown="handlePress('O')" 
-            onmouseup="handleRelease('O')" 
-            onmouseleave="handleRelease('O')"
-            onclick="toggleButtonSpeed(this)"
-            class="speed-button active">Medium
-          </button>
-          <button 
-            onmousedown="handlePress('P')" 
-            onmouseup="handleRelease('P')" 
-            onmouseleave="handleRelease('P')"
-            onclick="toggleButtonSpeed(this)"
-            class="speed-button">High
-          </button>
-        </div>
-        <div>
-          <h3>Light</h3>
-          <button onmousedown="handlePress('L')" 
-            onmouseup="handleRelease('L')" 
-            onmouseleave="handleRelease('L')"
-            onclick="toggleButtonLight(this)"
-            class="light-button">On
-          </button>
-          <button 
-            onmousedown="handlePress('K')" 
-            onmouseup="handleRelease('K')" 
-            onmouseleave="handleRelease('K')"
-            onclick="toggleButtonLight(this)"
-            class="light-button active">Off
-          </button>
-        </div>
-      </div>
 
       <!-- Camera Movement Controls -->
       <div class="control-panel">
@@ -132,6 +70,76 @@
             onmousedown="handlePress('H')" 
             onmouseup="handleRelease('H')" 
             onmouseleave="handleRelease('H')"id="cam-right">&rarr;</button>
+        </div>
+      </div>
+
+      
+      <!-- Center Controls (Mode, Speed, Lights) -->
+      <div class="control-panel center-controls">
+        <div>
+          <h3>Car Info</h3>
+          <p id="message">{{message}}</p>
+        </div>
+        <div>
+          <h3>Mode</h3>
+          <div class="button-group">
+            <button 
+              onmousedown="handlePress('M')" 
+              onmouseup="handleRelease('M')" 
+              onmouseleave="handleRelease('M')"
+              onclick="toggleButtonMode(this)" class="mode-button active">Manual
+            </button>
+            <button 
+              onmousedown="handlePress('N')" 
+              onmouseup="handleRelease('N')" 
+              onmouseleave="handleRelease('N')"
+              onclick="toggleButtonMode(this)" class="mode-button">Automatic
+            </button>
+          </div>
+        </div>
+        <div>
+          <h3>Speed</h3>
+          <div class="button-group">
+            <button 
+              onmousedown="handlePress('I')" 
+              onmouseup="handleRelease('I')" 
+              onmouseleave="handleRelease('I')"
+              onclick="toggleButtonSpeed(this)"
+              class="speed-button">Low
+            </button>
+            <button 
+              onmousedown="handlePress('O')" 
+              onmouseup="handleRelease('O')" 
+              onmouseleave="handleRelease('O')"
+              onclick="toggleButtonSpeed(this)"
+              class="speed-button active">Medium
+            </button>
+            <button 
+              onmousedown="handlePress('P')" 
+              onmouseup="handleRelease('P')" 
+              onmouseleave="handleRelease('P')"
+              onclick="toggleButtonSpeed(this)"
+              class="speed-button">High
+            </button>
+          </div>
+        </div>
+        <div>
+          <h3>Light</h3>
+          <div class="button-group">
+            <button onmousedown="handlePress('L')" 
+              onmouseup="handleRelease('L')" 
+              onmouseleave="handleRelease('L')"
+              onclick="toggleButtonLight(this)"
+              class="light-button">On
+            </button>
+            <button 
+              onmousedown="handlePress('K')" 
+              onmouseup="handleRelease('K')" 
+              onmouseleave="handleRelease('K')"
+              onclick="toggleButtonLight(this)"
+              class="light-button active">Off
+            </button>
+          </div>
         </div>
       </div>
     </div>

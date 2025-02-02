@@ -31,11 +31,12 @@ body {
 
 /* Control Containers */
 .main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 20px;
+  width: 80%;
+  justify-items: center; /* Center items horizontally */
 }
 
 .control-panel {
@@ -48,6 +49,11 @@ body {
 
 .control-panel h2 {
   margin: 10px 0;
+}
+
+.main-container > .control-panel:nth-child(3) {
+  grid-column: span 2; /* Span across both columns */
+  justify-self: center; /* Center horizontally */
 }
 
 /* Buttons */
@@ -77,7 +83,7 @@ button:hover {
 /* Mode and Light Controls */
 .center-controls {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
 }
@@ -102,4 +108,10 @@ button:hover {
 }
 .video-stream {
   transform: scale(-0.7, -0.7); /* Flip horizontally and vertically */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
