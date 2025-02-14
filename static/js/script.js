@@ -63,8 +63,8 @@ document.addEventListener('keydown', function(event) {
         case 'a': keyState = 'A'; break;
         case 'ArrowUp': keyState = 'T'; break;
         case 'ArrowDown': keyState = 'G'; break;
-        case 'ArrowRight': keyState = 'F'; break;
-        case 'ArrowLeft': keyState = 'H'; break;
+        case 'ArrowRight': keyState = 'H'; break;
+        case 'ArrowLeft': keyState = 'F'; break;
         default:
             return; // Ignore keys that do not match any action
     }

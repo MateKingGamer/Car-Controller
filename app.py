@@ -67,9 +67,9 @@ def car():
             ser.write(bytes([9]))
         elif state == 'G':
             ser.write(bytes([10]))
-        elif state == 'F':
-            ser.write(bytes([11]))
         elif state == 'H':
+            ser.write(bytes([11]))
+        elif state == 'F':
             ser.write(bytes([12]))
         elif state == 'L':
             ser.write(bytes([13]))
@@ -87,4 +87,4 @@ def car():
 
 if __name__ == '__main__':
     # Run the app on all network interfaces
-    app.run(host='192.168.1.141', port=5000, debug=True)# tuj de host od ipconfg da se vidi adresda treba
+    app.run(host='0.0.0.0', port=5000, debug=True)# tuj de host od ipconfg da se vidi adresda treba

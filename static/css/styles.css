@@ -20,19 +20,10 @@ body {
   opacity: 0.6;
 }
 
-/* Video Stream */
-#video-stream {
-  width: 30%;
-  height: auto;
-  margin-bottom: 20px;
-  border: 2px solid white;
-  border-radius: 10px;
-}
-
 /* Control Containers */
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 20px;
   width: 80%;
@@ -51,8 +42,8 @@ body {
   margin: 10px 0;
 }
 
-.main-container > .control-panel:nth-child(3) {
-  grid-column: span 2; /* Span across both columns */
+.main-container > .control-panel:nth-child(4) {
+  grid-column: span 3; /* Span across both columns */
   justify-self: center; /* Center horizontally */
 }
 
@@ -83,9 +74,19 @@ button:hover {
 /* Mode and Light Controls */
 .center-controls {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center; /* Center items horizontally */
+}
+
+
+.controls-container {
+  display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 10px;
+  justify-content: center; /* Center the controls horizontally */
+  gap: 30px; /* Add space between the controls */
+  width: 100%;
 }
 
 .center-controls div {
@@ -107,11 +108,21 @@ button:hover {
   margin: 0px;
 }
 .video-stream {
-  transform: scale(-0.7, -0.7); /* Flip horizontally and vertically */
+  transform: scale(-1, -1); /* Flip horizontally and vertically */
 }
 
 .button-group {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+div h1{
+  text-align: center;
+  font-weight: bold;
+}
+.movement{
+ margin-top: 50px;
+}
+.control-panel h2{
+ margin-top: 35px;
 }
